@@ -1,0 +1,66 @@
+If you specifically need to install Node.js version 18.17.1 and npm version 6.14.17 on your RHEL-based Linux system, you can use the Node Version Manager (nvm) to manage multiple Node.js versions. Here are the steps to do so:
+
+Install NVM:
+
+First, you need to install NVM, which will allow you to manage Node.js versions. Open your terminal and run the following command to download and install NVM:
+
+bash
+Copy code
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+After installing NVM, close and reopen your terminal or run the following command to apply the changes:
+
+bash
+Copy code
+source ~/.bashrc
+Replace ~/.bashrc with ~/.zshrc if you're using the Zsh shell.
+
+Install Node.js 18.17.1:
+
+Now that NVM is installed, you can use it to install the specific version of Node.js you want. Run the following command:
+
+bash
+Copy code
+nvm install 18.17.1
+This will download and install Node.js version 18.17.1.
+
+Switch to Node.js 18.17.1:
+
+To use the installed Node.js version, set it as the default:
+
+bash
+Copy code
+nvm use 18.17.1
+Install npm 6.14.17:
+
+By default, NVM will install a compatible version of npm. However, if you specifically need npm version 6.14.17, you can install it using the following command:
+
+bash
+Copy code
+npm install -g npm@6.14.17
+This will install npm version 6.14.17 globally.
+
+Verify Versions:
+
+You can verify that you have the correct versions installed by running:
+
+bash
+Copy code
+node -v
+npm -v
+These commands should display Node.js version 18.17.1 and npm version 6.14.17.
+
+Now, you have Node.js version 18.17.1 and npm version 6.14.17 installed on your system, managed through NVM.
+
+
+
+
+commands:
+
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+source ~/.bashrc
+nvm install 18.17.1
+nvm use 18.17.1
+npm install -g npm@6.14.17
+node -v
+npm -v
